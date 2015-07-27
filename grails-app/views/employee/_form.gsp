@@ -56,6 +56,24 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'nominations', 'error')} ">
+	<label for="nominations">
+		<g:message code="employee.nominations.label" default="Nominations" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${employeeInstance?.nominations?}" var="n">
+    <li><g:link controller="nomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="nomination" action="create" params="['employee.id': employeeInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'nomination.label', default: 'Nomination')])}</g:link>
+</li>
+</ul>
+
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'teams', 'error')} ">
 	<label for="teams">
 		<g:message code="employee.teams.label" default="Teams" />

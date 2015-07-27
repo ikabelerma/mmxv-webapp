@@ -77,6 +77,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${employeeInstance?.nominations}">
+				<li class="fieldcontain">
+					<span id="nominations-label" class="property-label"><g:message code="employee.nominations.label" default="Nominations" /></span>
+					
+						<g:each in="${employeeInstance.nominations}" var="n">
+						<span class="property-value" aria-labelledby="nominations-label"><g:link controller="nomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${employeeInstance?.teams}">
 				<li class="fieldcontain">
 					<span id="teams-label" class="property-label"><g:message code="employee.teams.label" default="Teams" /></span>
