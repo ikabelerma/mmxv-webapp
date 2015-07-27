@@ -8,6 +8,8 @@ class Employee {
 	String emailAddress
 	String mobileNumber
 	Boolean isApprover
+	static belongsTo = Team
+	static hasMany = [teams : Team]
 	
     static constraints = {
 		uid blank: false, unique: true
@@ -17,4 +19,8 @@ class Employee {
 		mobileNumber blank: false 
 		isApprover blank : true
     }
+	
+	String toString() {
+		return this.lastName + ", " + firstName
+	}
 }

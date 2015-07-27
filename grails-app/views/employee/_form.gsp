@@ -56,3 +56,12 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'teams', 'error')} ">
+	<label for="teams">
+		<g:message code="employee.teams.label" default="Teams" />
+		
+	</label>
+	
+
+</div>
+
