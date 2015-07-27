@@ -1,5 +1,7 @@
 .classpath
 .project
+.settings/**
+target-eclipse/**
 target/**
 grailsw
 grailsw.bat
