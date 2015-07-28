@@ -8,7 +8,6 @@ class Employee {
 	String emailAddress
 	String mobileNumber
 	Boolean isApprover
-	static belongsTo = Team
 	static hasMany = [teams : Team, nominations : Nomination]
 		
     static constraints = {
