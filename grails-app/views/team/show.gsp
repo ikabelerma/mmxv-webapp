@@ -43,6 +43,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${teamInstance?.nominations}">
+				<li class="fieldcontain">
+					<span id="nominations-label" class="property-label"><g:message code="team.nominations.label" default="Nominations" /></span>
+					
+						<g:each in="${teamInstance.nominations}" var="n">
+						<span class="property-value" aria-labelledby="nominations-label"><g:link controller="teamNomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:teamInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

@@ -20,3 +20,21 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: teamInstance, field: 'nominations', 'error')} ">
+	<label for="nominations">
+		<g:message code="team.nominations.label" default="Nominations" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${teamInstance?.nominations?}" var="n">
+    <li><g:link controller="teamNomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="teamNomination" action="create" params="['team.id': teamInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'teamNomination.label', default: 'TeamNomination')])}</g:link>
+</li>
+</ul>
+
+
+</div>
+

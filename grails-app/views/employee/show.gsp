@@ -82,7 +82,7 @@
 					<span id="nominations-label" class="property-label"><g:message code="employee.nominations.label" default="Nominations" /></span>
 					
 						<g:each in="${employeeInstance.nominations}" var="n">
-						<span class="property-value" aria-labelledby="nominations-label"><g:link controller="nomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="nominations-label"><g:link controller="employeeNomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>
