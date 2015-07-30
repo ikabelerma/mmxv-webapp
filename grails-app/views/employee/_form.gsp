@@ -82,10 +82,10 @@
 	
 <ul class="one-to-many">
 <g:each in="${employeeInstance?.nominations?}" var="n">
-    <li><g:link controller="nomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
+    <li><g:link controller="employeeNomination" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:link controller="nomination" action="create" params="['employee.id': employeeInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'nomination.label', default: 'Nomination')])}</g:link>
+<g:link controller="employeeNomination" action="create" params="['employee.id': employeeInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'employeeNomination.label', default: 'EmployeeNomination')])}</g:link>
 </li>
 </ul>
 

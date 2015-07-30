@@ -1,0 +1,30 @@
+package mmxv.webapp
+
+class Employee {
+	
+	String uid
+	String firstName
+	String lastName
+	String emailAddress
+	String mobileNumber
+	Boolean isApprover
+	static belongsTo = Team
+<<<<<<< HEAD
+	static hasMany = [teams : Team, nominations : Nomination, awards : Award]
+=======
+	static hasMany = [teams : Team, nominations : EmployeeNomination, awards : EmployeeAward]
+>>>>>>> awards
+		
+    static constraints = {
+		uid blank: false, unique: true
+		firstName blank: false
+		lastName blank: false
+		emailAddress blank: false, email : true 
+		mobileNumber blank: false 
+		isApprover blank : true
+    }
+	
+	String toString() {
+		return this.lastName + ", " + firstName
+	}
+}
