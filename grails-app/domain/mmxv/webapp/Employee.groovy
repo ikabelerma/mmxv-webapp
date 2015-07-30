@@ -9,7 +9,7 @@ class Employee {
 	String mobileNumber
 	Boolean isApprover
 	static belongsTo = Team
-	static hasMany = [teams : Team, nominations : EmployeeNomination]
+	static hasMany = [teams : Team, nominations : EmployeeNomination, awards : EmployeeAward]
 		
     static constraints = {
 		uid blank: false, unique: true
