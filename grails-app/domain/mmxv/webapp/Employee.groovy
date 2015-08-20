@@ -9,7 +9,7 @@ class Employee {
 	String mobileNumber
 	Boolean isApprover
 	static belongsTo = Team
-	static hasMany = [teams : Team, nominations : Nomination, awards : Award]
+	static hasMany = [teams : Team, nominations : EmployeeNomination, awards : EmployeeAward]
 		
     static constraints = {
 		uid blank: false, unique: true
@@ -20,7 +20,12 @@ class Employee {
 		isApprover blank : true
     }
 	
+	def computeTotalPoints() {
+		def total = this.awards.sum { it.pointsAwarded }
+		return total
+	}
+	
 	String toString() {
-		return this.lastName + ", " + firstName
+		return this.lastName + ", " + this.firstName
 	}
 }

@@ -23,15 +23,6 @@
 			</g:if>
 			<ol class="property-list nomination">
 			
-				<g:if test="${nominationInstance?.nominee}">
-				<li class="fieldcontain">
-					<span id="nominee-label" class="property-label"><g:message code="nomination.nominee.label" default="Nominee" /></span>
-					
-						<span class="property-value" aria-labelledby="nominee-label"><g:link controller="employee" action="show" id="${nominationInstance?.nominee?.id}">${nominationInstance?.nominee?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${nominationInstance?.criteria}">
 				<li class="fieldcontain">
 					<span id="criteria-label" class="property-label"><g:message code="nomination.criteria.label" default="Criteria" /></span>

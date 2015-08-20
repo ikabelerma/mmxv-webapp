@@ -1,7 +1,6 @@
 package mmxv.webapp
 
 class EmployeeNomination extends Nomination {
-	EmployeeNomination nomination
 	static belongsTo = [nominee : Employee]
 
     static constraints = {

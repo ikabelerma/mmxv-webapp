@@ -64,10 +64,10 @@
 	
 <ul class="one-to-many">
 <g:each in="${employeeInstance?.awards?}" var="a">
-    <li><g:link controller="award" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
+    <li><g:link controller="employeeAward" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:link controller="award" action="create" params="['employee.id': employeeInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'award.label', default: 'Award')])}</g:link>
+<g:link controller="employeeAward" action="create" params="['employee.id': employeeInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'employeeAward.label', default: 'EmployeeAward')])}</g:link>
 </li>
 </ul>
 

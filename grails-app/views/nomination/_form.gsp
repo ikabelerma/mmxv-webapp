@@ -2,15 +2,6 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: nominationInstance, field: 'nominee', 'error')} required">
-	<label for="nominee">
-		<g:message code="nomination.nominee.label" default="Nominee" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="nominee" name="nominee.id" from="${mmxv.webapp.Employee.list()}" optionKey="id" required="" value="${nominationInstance?.nominee?.id}" class="many-to-one"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: nominationInstance, field: 'criteria', 'error')} required">
 	<label for="criteria">
 		<g:message code="nomination.criteria.label" default="Criteria" />

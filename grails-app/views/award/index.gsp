@@ -28,10 +28,6 @@
 					
 						<g:sortableColumn property="remarks" title="${message(code: 'award.remarks.label', default: 'Remarks')}" />
 					
-						<th><g:message code="award.nomination.label" default="Nomination" /></th>
-					
-						<th><g:message code="award.nominee.label" default="Nominee" /></th>
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -41,10 +37,6 @@
 						<td><g:link action="show" id="${awardInstance.id}">${fieldValue(bean: awardInstance, field: "pointsAwarded")}</g:link></td>
 					
 						<td>${fieldValue(bean: awardInstance, field: "remarks")}</td>
-					
-						<td>${fieldValue(bean: awardInstance, field: "nomination")}</td>
-					
-						<td>${fieldValue(bean: awardInstance, field: "nominee")}</td>
 					
 					</tr>
 				</g:each>

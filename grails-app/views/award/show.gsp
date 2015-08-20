@@ -41,24 +41,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${awardInstance?.nomination}">
-				<li class="fieldcontain">
-					<span id="nomination-label" class="property-label"><g:message code="award.nomination.label" default="Nomination" /></span>
-					
-						<span class="property-value" aria-labelledby="nomination-label"><g:link controller="nomination" action="show" id="${awardInstance?.nomination?.id}">${awardInstance?.nomination?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${awardInstance?.nominee}">
-				<li class="fieldcontain">
-					<span id="nominee-label" class="property-label"><g:message code="award.nominee.label" default="Nominee" /></span>
-					
-						<span class="property-value" aria-labelledby="nominee-label"><g:link controller="employee" action="show" id="${awardInstance?.nominee?.id}">${awardInstance?.nominee?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form url="[resource:awardInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

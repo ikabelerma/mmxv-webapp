@@ -24,8 +24,6 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="nomination.nominee.label" default="Nominee" /></th>
-					
 						<th><g:message code="nomination.criteria.label" default="Criteria" /></th>
 					
 						<g:sortableColumn property="justification" title="${message(code: 'nomination.justification.label', default: 'Justification')}" />
@@ -36,9 +34,7 @@
 				<g:each in="${nominationInstanceList}" status="i" var="nominationInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${nominationInstance.id}">${fieldValue(bean: nominationInstance, field: "nominee")}</g:link></td>
-					
-						<td>${fieldValue(bean: nominationInstance, field: "criteria")}</td>
+						<td><g:link action="show" id="${nominationInstance.id}">${fieldValue(bean: nominationInstance, field: "criteria")}</g:link></td>
 					
 						<td>${fieldValue(bean: nominationInstance, field: "justification")}</td>
 					
