@@ -88,6 +88,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${employeeInstance?.location}">
+				<li class="fieldcontain">
+					<span id="location-label" class="property-label"><g:message code="employee.location.label" default="Location" /></span>
+					
+						<span class="property-value" aria-labelledby="location-label"><g:link controller="location" action="show" id="${employeeInstance?.location?.id}">${employeeInstance?.location?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${employeeInstance?.nominations}">
 				<li class="fieldcontain">
 					<span id="nominations-label" class="property-label"><g:message code="employee.nominations.label" default="Nominations" /></span>

@@ -8,6 +8,7 @@ class Employee {
 	String emailAddress
 	String mobileNumber
 	Boolean isApprover
+	Location location
 	static belongsTo = Team
 	static hasMany = [teams : Team, nominations : EmployeeNomination, awards : EmployeeAward]
 		

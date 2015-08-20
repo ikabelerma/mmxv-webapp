@@ -74,6 +74,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'location', 'error')} required">
+	<label for="location">
+		<g:message code="employee.location.label" default="Location" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="location" name="location.id" from="${mmxv.webapp.Location.list()}" optionKey="id" required="" value="${employeeInstance?.location?.id}" class="many-to-one"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: employeeInstance, field: 'nominations', 'error')} ">
 	<label for="nominations">
 		<g:message code="employee.nominations.label" default="Nominations" />
