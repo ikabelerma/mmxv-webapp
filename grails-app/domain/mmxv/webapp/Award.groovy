@@ -1,7 +1,7 @@
 package mmxv.webapp
 
 class Award {
-	Integer pointsAwarded
+	int pointsAwarded
 	String remarks
 	
     static constraints = {
