@@ -21,8 +21,11 @@ class Employee {
 		isApprover blank : true
     }
 	
-	def computeTotalPoints() {
-		def total = this.awards.sum { it.pointsAwarded }
+	def int computeTotalPoints() {
+		def total = 0
+		this.awards.each {
+			award -> total += award.pointsAwarded
+		}
 		return total
 	}
 	
